@@ -521,7 +521,18 @@
                                     diffMinutes = 1440 - currentMinutes + timesObject[nextIndex];
                                 }
 
-                                $("#nextTime").html(timeFromMinutes(diffMinutes) + " minutes untill " + nextIndex);
+                                if(nextIndex == "Fajr"){
+                                    $("#nextTime").html(nextIndex +" Starts" + " in " + timeFromMinutes(diffMinutes)+"hr");
+                                }
+                                else if(nextIndex == "Zawal"){
+                                    $("#nextTime").html(nextIndex +" Starts" + " in " + timeFromMinutes(diffMinutes)+"hr");
+                                }
+                                else if(nextIndex == "Maghrib"){
+                                    $("#nextTime").html(nextIndex +" Starts" + " in " + timeFromMinutes(diffMinutes)+"hr");
+                                }
+                                else{
+                                    $("#nextTime").html(nextIndex +" Starts" + " in " + timeFromMinutes(diffMinutes)+"hr");
+                                }
 
                             }, 1000);
                         }
